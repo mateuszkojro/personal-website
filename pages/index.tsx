@@ -14,7 +14,9 @@ import {
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import React from "react";
+import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm"
 
 const FixedMenu = () => {
   return (
@@ -31,14 +33,12 @@ const FixedMenu = () => {
         <Dropdown item simple text="Dropdown">
           <Dropdown.Menu>
             <Dropdown.Item>List Item</Dropdown.Item>
-            <Dropdown.Item>List Item</Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Header>Header Item</Dropdown.Header>
             <Dropdown.Item>
               <i className="dropdown icon" />
               <span className="text">Submenu</span>
               <Dropdown.Menu>
-                <Dropdown.Item>List Item</Dropdown.Item>
                 <Dropdown.Item>List Item</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown.Item>
@@ -50,7 +50,49 @@ const FixedMenu = () => {
   );
 };
 
+const Footer = () => (
+  <Segment inverted vertical style={{ padding: "5em 0em" }}>
+    <Container>
+      <Grid divided inverted stackable>
+        <Grid.Row>
+          <Grid.Column width={7}>
+            <Header as="h4" inverted>
+              Some links:
+            </Header>
+            <p>Something quick</p>
+          </Grid.Column>
+          <Grid.Column width={3}>
+            <Header inverted as="h4" content="About" />
+            <List link inverted>
+              <List.Item as="a">Sitemap</List.Item>
+            </List>
+          </Grid.Column>
+          <Grid.Column width={3}>
+            <Header inverted as="h4" content="Services" />
+            <List link inverted>
+              <List.Item as="a">Banana Pre-Order</List.Item>
+            </List>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Container>
+  </Segment>
+);
+
 export default function Home() {
+  let [article, changeArticle] = useState("");
+  const getReadme = (url: string) => {
+    fetch(url)
+      .then((res) => {
+        console.log(res);
+        return res.text();
+      })
+      .then((text) => {
+        console.log(text.toString());
+        changeArticle(text);
+      });
+  };
+
   return (
     <div>
       <FixedMenu />
@@ -62,8 +104,8 @@ export default function Home() {
                 Hi!
               </Header>
               <p style={{ fontSize: "1.33em" }}>
-                My name is Mateusz, and I am studying Physics and Computer
-                Science at Univeristy of Lodz in Poland
+                My name is Mateusz, I am a software engineer studying Physics
+                and Computer Science at Univeristy of Lodz in Poland
               </p>
             </Grid.Column>
             <Grid.Column floated="right" width={6}>
@@ -72,7 +114,13 @@ export default function Home() {
           </Grid.Row>
           <Grid.Row>
             <Grid.Column textAlign="center">
-              <Button icon labelPosition="left" size="huge">
+              <Button
+                icon
+                labelPosition="left"
+                as="a"
+                href="/Mateusz_Kojro_CV_en.pdf"
+                size="huge"
+              >
                 <Icon name="file" />
                 My CV
               </Button>
@@ -116,10 +164,18 @@ export default function Home() {
       <Segment style={{ padding: "8em 0em" }} vertical>
         <Container text>
           <Header as="h3" style={{ fontSize: "2em" }}>
-            Section 1
+            Article 1
           </Header>
-          <p style={{ fontSize: "1.33em" }}>some info</p>
-          <Button as="a" size="large">
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{article}</ReactMarkdown>
+          <Button
+            as="a"
+            size="large"
+            onClick={() => {
+              getReadme(
+                `https://raw.githubusercontent.com/mateuszkojro/video_player/master/README.md`
+              );
+            }}
+          >
             Read More
           </Button>
 
@@ -142,34 +198,7 @@ export default function Home() {
         </Container>
       </Segment>
 
-      <Segment inverted vertical style={{ padding: "5em 0em" }}>
-        <Container>
-          <Grid divided inverted stackable>
-            <Grid.Row>
-              <Grid.Column width={7}>
-                <Header as="h4" inverted>
-                  Some links:
-                </Header>
-                <p>
-                  Something quick
-                </p>
-              </Grid.Column>
-              <Grid.Column width={3}>
-                <Header inverted as="h4" content="About" />
-                <List link inverted>
-                  <List.Item as="a">Sitemap</List.Item>
-                </List>
-              </Grid.Column>
-              <Grid.Column width={3}>
-                <Header inverted as="h4" content="Services" />
-                <List link inverted>
-                  <List.Item as="a">Banana Pre-Order</List.Item>
-                </List>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
-      </Segment>
+      <Footer />
     </div>
   );
 }
