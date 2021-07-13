@@ -45,8 +45,16 @@ export default function Home() {
                 and Computer Science at Univeristy of Lodz in Poland
               </p>
             </Grid.Column>
-            <Grid.Column floated="right" width={6}>
-              {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
+            <Grid.Column floated="left" width={8}>
+              <Image
+                bordered
+                rounded
+                size="large"
+                layout="fill"
+                as="a"
+                href="https://github.com/mateuszkojro"
+                src={`http://github-readme-streak-stats.herokuapp.com?user=mateuszkojro`}
+              />
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>
