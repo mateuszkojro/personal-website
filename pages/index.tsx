@@ -2,82 +2,19 @@ import {
   Button,
   Container,
   Divider,
-  Dropdown,
+  Image,
   Grid,
   Header,
   Icon,
-  List,
-  Menu,
   Segment,
 } from "semantic-ui-react";
 
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm"
+import remarkGfm from "remark-gfm";
 
-const FixedMenu = () => {
-  return (
-    <Menu fixed="top" inverted>
-      <Container>
-        <Menu.Item as="a" header>
-          {/* <Image size="mini" src="/logo.png" style={{ marginRight: "1.5em" }} /> */}
-          Mateusz Kojro
-        </Menu.Item>
-        <Menu.Item as="a">Home</Menu.Item>
-        <Menu.Item as="a">Github</Menu.Item>
-        <Menu.Item as="a">About me</Menu.Item>
-
-        <Dropdown item simple text="Dropdown">
-          <Dropdown.Menu>
-            <Dropdown.Item>List Item</Dropdown.Item>
-            <Dropdown.Divider />
-            <Dropdown.Header>Header Item</Dropdown.Header>
-            <Dropdown.Item>
-              <i className="dropdown icon" />
-              <span className="text">Submenu</span>
-              <Dropdown.Menu>
-                <Dropdown.Item>List Item</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown.Item>
-            <Dropdown.Item>List Item</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-      </Container>
-    </Menu>
-  );
-};
-
-const Footer = () => (
-  <Segment inverted vertical style={{ padding: "5em 0em" }}>
-    <Container>
-      <Grid divided inverted stackable>
-        <Grid.Row>
-          <Grid.Column width={7}>
-            <Header as="h4" inverted>
-              Some links:
-            </Header>
-            <p>Something quick</p>
-          </Grid.Column>
-          <Grid.Column width={3}>
-            <Header inverted as="h4" content="About" />
-            <List link inverted>
-              <List.Item as="a">Sitemap</List.Item>
-            </List>
-          </Grid.Column>
-          <Grid.Column width={3}>
-            <Header inverted as="h4" content="Services" />
-            <List link inverted>
-              <List.Item as="a">Banana Pre-Order</List.Item>
-            </List>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Container>
-  </Segment>
-);
+import CustomFooter from "../components/CustomFooter";
+import TopBar from "../components/TopBar";
 
 export default function Home() {
   let [article, changeArticle] = useState("");
@@ -95,7 +32,7 @@ export default function Home() {
 
   return (
     <div>
-      <FixedMenu />
+      <TopBar />
       <Segment style={{ padding: "8em 0em" }} vertical>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
@@ -198,7 +135,7 @@ export default function Home() {
         </Container>
       </Segment>
 
-      <Footer />
+      <CustomFooter />
     </div>
   );
 }
