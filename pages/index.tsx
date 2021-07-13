@@ -74,6 +74,16 @@ export default function Home() {
                 labelPosition="left"
                 size="huge"
                 as="a"
+                href="/gallery"
+              >
+                <Icon name="images outline" />
+                Projects Gallery
+              </Button>
+              <Button
+                icon
+                labelPosition="left"
+                size="huge"
+                as="a"
                 href="https://github.com/mateuszkojro"
               >
                 <Icon name="github square" />
