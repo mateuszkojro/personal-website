@@ -7,6 +7,8 @@ import {
   Header,
   Icon,
   Segment,
+  GridColumn,
+  GridRow,
 } from "semantic-ui-react";
 
 import React, { useState } from "react";
@@ -94,6 +96,55 @@ export default function Home() {
         </Grid>
       </Segment>
 
+      <Segment style={{ padding: "8em 0em" }} vertical>
+        <Grid container stackable verticalAlign="middle">
+          <Grid.Row >
+            <Grid.Column  >
+              <Icon name="add to calendar" size="massive" />
+            </Grid.Column>
+            <Grid.Column floated="right" width={8}>
+              {/* <Container text> */}
+                <Header as="h3" style={{ fontSize: "2em" }}>
+                  My notes
+                </Header>
+                <p style={{ fontSize: "1.33em" }}>
+                  Jupyter notebooks containng writeups created while learning
+                  new subjects.{" "}
+                </p>
+                <Button as="a" size="large">
+                  Notes
+                </Button>
+              {/* </Container> */}
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+
+        <Divider
+          as="h4"
+          className="header"
+          horizontal
+          style={{ margin: "3em 0em", textTransform: "uppercase" }}
+        >
+          <a href="#">Case Studies</a>
+        </Divider>
+
+        <Header as="h3" style={{ fontSize: "2em" }}>
+          Article
+        </Header>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{article}</ReactMarkdown>
+        <Button
+          as="a"
+          size="large"
+          onClick={() => {
+            getReadme(
+              `https://raw.githubusercontent.com/mateuszkojro/video_player/master/README.md`
+            );
+          }}
+        >
+          Read More
+        </Button>
+        {/* </Container> */}
+      </Segment>
       <Segment style={{ padding: "0em" }} vertical>
         <Grid celled="internally" columns="equal" stackable>
           <Grid.Row textAlign="center">
@@ -114,43 +165,6 @@ export default function Home() {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-      </Segment>
-
-      <Segment style={{ padding: "8em 0em" }} vertical>
-        <Container text>
-          <Header as="h3" style={{ fontSize: "2em" }}>
-            Article 1
-          </Header>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{article}</ReactMarkdown>
-          <Button
-            as="a"
-            size="large"
-            onClick={() => {
-              getReadme(
-                `https://raw.githubusercontent.com/mateuszkojro/video_player/master/README.md`
-              );
-            }}
-          >
-            Read More
-          </Button>
-
-          <Divider
-            as="h4"
-            className="header"
-            horizontal
-            style={{ margin: "3em 0em", textTransform: "uppercase" }}
-          >
-            <a href="#">Case Studies</a>
-          </Divider>
-
-          <Header as="h3" style={{ fontSize: "2em" }}>
-            Section 2
-          </Header>
-          <p style={{ fontSize: "1.33em" }}>quick info</p>
-          <Button as="a" size="large">
-            More info
-          </Button>
-        </Container>
       </Segment>
 
       <CustomFooter />
