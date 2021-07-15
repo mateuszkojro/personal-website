@@ -24,14 +24,13 @@ let articles: Array<Article> = [
     category: "TS",
     description: "Simple Markdown transpiler written in TypeScript",
     github: `https://github.com/mateuszkojro/markdown_parser`,
-    writeUp: "/markdown-transpiler",
   },
   {
-    name: "Quantum summator",
+    name: "Quantum basics",
     category: "Jupyter Notebook",
-    description: "Simple Markdown transpiler written in TypeScript",
-    github: `https://github.com/mateuszkojro/markdown_parser`,
-    writeUp: "/markdown-transpiler",
+    description: "Intro notes about quantum computers",
+    github: `https://github.com/mateuszkojro/quantum`,
+    writeUp: "show_notebook.html?notebook=https://raw.githubusercontent.com/mateuszkojro/quantum/main/basics.ipynb",
   },
 ];
 
