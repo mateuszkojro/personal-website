@@ -32,6 +32,10 @@ export default function Home() {
       });
   };
 
+  const buttonStyle = {
+    marginTop: "0.5em",
+  };
+
   return (
     <div>
       <TopBar />
@@ -63,6 +67,7 @@ export default function Home() {
             <Grid.Column textAlign="center">
               <Button
                 icon
+                style={buttonStyle}
                 labelPosition="left"
                 as="a"
                 href="/Mateusz_Kojro_CV_en.pdf"
@@ -73,6 +78,7 @@ export default function Home() {
               </Button>
               <Button
                 icon
+                style={buttonStyle}
                 labelPosition="left"
                 size="huge"
                 as="a"
@@ -83,6 +89,7 @@ export default function Home() {
               </Button>
               <Button
                 icon
+                style={buttonStyle}
                 labelPosition="left"
                 size="huge"
                 as="a"
@@ -98,22 +105,22 @@ export default function Home() {
 
       <Segment style={{ padding: "8em 0em" }} vertical>
         <Grid container stackable verticalAlign="middle">
-          <Grid.Row >
-            <Grid.Column  >
+          <Grid.Row>
+            <Grid.Column>
               <Icon name="add to calendar" size="massive" />
             </Grid.Column>
             <Grid.Column floated="right" width={8}>
               {/* <Container text> */}
-                <Header as="h3" style={{ fontSize: "2em" }}>
-                  My notes
-                </Header>
-                <p style={{ fontSize: "1.33em" }}>
-                  Jupyter notebooks containng writeups created while learning
-                  new subjects.{" "}
-                </p>
-                <Button as="a" size="large">
-                  Notes
-                </Button>
+              <Header as="h3" style={{ fontSize: "2em" }}>
+                My notes
+              </Header>
+              <p style={{ fontSize: "1.33em" }}>
+                Jupyter notebooks containng writeups created while learning new
+                subjects.{" "}
+              </p>
+              <Button as="a" size="large">
+                Notes
+              </Button>
               {/* </Container> */}
             </Grid.Column>
           </Grid.Row>
