@@ -1,0 +1,6 @@
+[submodule "nbpreview"]
+	path = nbpreview
+	url = https://github.com/jsvine/nbpreview
+[submodule "public/nbpreview"]
+	path = public/nbpreview
+	url = https://github.com/jsvine/nbpreview
