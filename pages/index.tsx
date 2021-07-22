@@ -1,14 +1,11 @@
 import {
   Button,
-  Container,
   Divider,
   Image,
   Grid,
   Header,
   Icon,
   Segment,
-  GridColumn,
-  GridRow,
 } from "semantic-ui-react";
 
 import React, { useState } from "react";
@@ -118,7 +115,7 @@ export default function Home() {
                 Jupyter notebooks containng writeups created while learning new
                 subjects.{" "}
               </p>
-              <Button as="a" size="large">
+              <Button as="a" size="large" href="/notes">
                 Notes
               </Button>
               {/* </Container> */}
