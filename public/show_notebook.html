@@ -1,26 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>nbpreview — Jupyter Notebook Previewer</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1">
-        <script src="nbpreview/js/vendor/es5-shim.min.js"></script>
-        <script src="nbpreview/js/vendor/marked.min.js"></script>
-        <script src="nbpreview/js/vendor/purify.min.js"></script>
-        <script src="nbpreview/js/vendor/ansi_up.min.js"></script>
-        <script src="nbpreview/js/vendor/prism.min.js"></script>
-        <script src="nbpreview/js/vendor/katex.min.js"></script>
-        <script src="nbpreview/js/vendor/katex-auto-render.min.js"></script>
-        <script src="nbpreview/js/vendor/notebook.min.js"></script>
-        <link rel="stylesheet" href="nbpreview/css/vendor/katex.min.css" />
-        <link rel="stylesheet" href="nbpreview/css/vendor/prism.css" />
-        <link rel="stylesheet" href="nbpreview/css/notebook.css" />
-        <link rel="stylesheet" href="nbpreview/css/nbpreview.css" />
-    </head>
-    <body>
-        <div id="main">
-            <div id="notebook-holder"></div>
+  <head>
+    <title>Note</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1" />
+    <script src="nbpreview/js/vendor/es5-shim.min.js"></script>
+    <script src="nbpreview/js/vendor/marked.min.js"></script>
+    <script src="nbpreview/js/vendor/purify.min.js"></script>
+    <script src="nbpreview/js/vendor/ansi_up.min.js"></script>
+    <script src="nbpreview/js/vendor/prism.min.js"></script>
+    <script src="nbpreview/js/vendor/katex.min.js"></script>
+    <script src="nbpreview/js/vendor/katex-auto-render.min.js"></script>
+    <script src="nbpreview/js/vendor/notebook.min.js"></script>
+    <link rel="stylesheet" href="nbpreview/css/vendor/katex.min.css" />
+    <link rel="stylesheet" href="nbpreview/css/vendor/prism.css" />
+    <link rel="stylesheet" href="nbpreview/css/notebook.css" />
+    <link rel="stylesheet" href="nbpreview/css/nbpreview.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="semantic/dist/semantic.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+      integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+      integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style type="text/css">
+      body {
+        background-color: #ffffff;
+      }
+      .ui.menu .item img.logo {
+        margin-right: 1.5em;
+        font-size: 10em;
+      }
+      .main.container {
+        margin-top: 7em;
+      }
+      .wireframe {
+        margin-top: 2em;
+      }
+      .ui.footer.segment {
+        margin: 5em 0em 0em;
+        padding: 5em 0em;
+      }
+    </style>
+    <style>
+      .menu_bar {
+        background-color: black;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        margin: 0px;
+        padding: 0px;
+        height: 3em;
+        width: 100%;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin-top: 5.25em; font-weight: bold;"></div>
+    <!-- <div class="menu_bar">Some text</div> -->
+
+    <div class="ui fixed inverted menu">
+      <div class="ui container">
+        <a href="/notes" class="item" style="font-size: 1.25em;">&crarr; Back</a>
         </div>
-        <script src="js/preview.js"></script>
-    </body>
+      </div>
+    </div>
+
+    <div id="main">
+      <div id="notebook-holder"></div>
+    </div>
+    <script src="js/preview.js"></script>
+  </body>
 </html>
