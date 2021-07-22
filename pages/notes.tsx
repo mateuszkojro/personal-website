@@ -16,14 +16,14 @@ let articles: Array<Article> = [
     {
         name: "Derivatives",
         category: "Jupyter Notebook",
-        description: "Simple NN writen enitrly from skratch in C++",
+        description: "Notes while learning derivatives",
         github: "https://github.com/mateuszkojro/calculus",
         writeUp: `show_notebook.html?notebook=https://raw.githubusercontent.com/mateuszkojro/calculus/master/Derivatives.ipynb`,
     },
     {
         name: "Integrals",
         category: "Jupyter Notebook",
-        description: "Simple Markdown transpiler written in TypeScript",
+        description: "Notes while lerning integrals",
         github: "https://github.com/mateuszkojro/calculus",
         writeUp: `show_notebook.html?notebook=https://raw.githubusercontent.com/mateuszkojro/calculus/master/Integrals.ipynb`,
     },
