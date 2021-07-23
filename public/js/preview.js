@@ -23,10 +23,15 @@
     })
     .then((text) => {
       console.log("Text: ", text);
-      // try {
+      try {
         render_notebook(text);
-      // } finally {
-      //   $holder.innerHTML = "Notebook not found";
-      // }
+      } catch(e) {
+        $holder.innerHTML = "<h1>Notebook not found<h1>";
+      }
     });
+  let title = params.get("title")
+  if (title){
+    document.getElementsByTagName('title')[0].innerHTML = title;
+    document.getElementById("site_title").innerHTML = title
+  }
 }.call(this));

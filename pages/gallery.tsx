@@ -25,13 +25,6 @@ let articles: Array<Article> = [
     description: "Simple Markdown transpiler written in TypeScript",
     github: `https://github.com/mateuszkojro/markdown_parser`,
   },
-  {
-    name: "Quantum basics",
-    category: "Jupyter Notebook",
-    description: "Intro notes about quantum computers",
-    github: `https://github.com/mateuszkojro/quantum`,
-    writeUp: "show_notebook.html?notebook=https://raw.githubusercontent.com/mateuszkojro/quantum/main/basics.ipynb",
-  },
 ];
 
 export default function Gallery() {

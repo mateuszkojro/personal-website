@@ -18,21 +18,21 @@ let articles: Array<Article> = [
         category: "Jupyter Notebook",
         description: "Notes while learning derivatives",
         github: "https://github.com/mateuszkojro/calculus",
-        writeUp: `show_notebook.html?notebook=https://raw.githubusercontent.com/mateuszkojro/calculus/master/Derivatives.ipynb`,
+        writeUp: `show_notebook.html?notebook=https://raw.githubusercontent.com/mateuszkojro/calculus/master/Derivatives.ipynb&title=Derivatives`,
     },
     {
         name: "Integrals",
         category: "Jupyter Notebook",
         description: "Notes while lerning integrals",
         github: "https://github.com/mateuszkojro/calculus",
-        writeUp: `show_notebook.html?notebook=https://raw.githubusercontent.com/mateuszkojro/calculus/master/Integrals.ipynb`,
+        writeUp: `show_notebook.html?notebook=https://raw.githubusercontent.com/mateuszkojro/calculus/master/Integrals.ipynb&title=Integrals`,
     },
     {
         name: "Quantum basics",
         category: "Jupyter Notebook",
         description: "Intro notes about quantum computers",
         github: `https://github.com/mateuszkojro/quantum`,
-        writeUp: "show_notebook.html?notebook=https://raw.githubusercontent.com/mateuszkojro/quantum/main/basics.ipynb",
+        writeUp: "show_notebook.html?notebook=https://raw.githubusercontent.com/mateuszkojro/quantum/main/basics.ipynb&title=Quantum Basics",
     },
 ];
 
