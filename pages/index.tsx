@@ -172,7 +172,7 @@ export default function Home() {
         </Grid>
       </Segment>
 
-      <CustomFooter />
+      {/* <CustomFooter /> */}
     </div>
   );
 }
