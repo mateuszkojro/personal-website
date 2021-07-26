@@ -1,44 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head"
-import { Menu, Container, Icon, Dropdown } from "semantic-ui-react";
+import { Menu, Container, Icon, Dropdown, Grid, Button, Segment, Sidebar } from "semantic-ui-react";
+
 
 export default function TopBar() {
   return (
     <>
-    <Head>
-      <title>Mateusz Kojro - Personal Website</title>
-    </Head>
-      <Menu fixed="top" compact inverted style={{ fontSize: "1.15em" }}>
-        <Container>
-          <Menu.Item as="a" href="/" header>
-            <Icon size="big" margin="2em" name="code" />
-            Mateusz Kojro
-          </Menu.Item>
-          <Menu.Item as="a" href="/">Home</Menu.Item>
-          <Menu.Item as="a" href="https://github.com/mateuszkojro">Github</Menu.Item>
-          <Menu.Item as="a" href="/about">
-            About me
-          </Menu.Item>
-          <Menu.Item as="a" href="/gallery">
-            Project Gallery
-          </Menu.Item>
-          <Dropdown item simple text="Dropdown">
-            <Dropdown.Menu>
-              <Dropdown.Item>List Item</Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Header>Header Item</Dropdown.Header>
-              <Dropdown.Item>
-                <i className="dropdown icon" />
-                <span className="text">Submenu</span>
+      <Head>
+        <title>Mateusz Kojro - Personal Website</title>
+      </Head>
+      <Grid >
+        <Grid.Row only="computer tablet">
+          <Menu fixed="top" compact inverted style={{ fontSize: "1.15em" }}>
+            <Container>
+              <Menu.Item as="a" href="/" header>
+                <Icon size="big" margin="2em" name="code" />
+                Mateusz Kojro
+              </Menu.Item>
+              <Menu.Item as="a" href="/">Home</Menu.Item>
+              <Menu.Item as="a" href="https://github.com/mateuszkojro">Github</Menu.Item>
+              <Menu.Item as="a" href="/about">
+                About me
+              </Menu.Item>
+              <Menu.Item as="a" href="/gallery">
+                Project Gallery
+              </Menu.Item>
+              <Dropdown item simple text="Dropdown" direction="right" fluid>
                 <Dropdown.Menu>
                   <Dropdown.Item>List Item</Dropdown.Item>
+                  <Dropdown.Divider />
+                  <Dropdown.Header>Header Item</Dropdown.Header>
+                  <Dropdown.Item>
+                    <i className="dropdown icon" />
+                    <span className="text">Submenu</span>
+                    <Dropdown.Menu>
+                      <Dropdown.Item>List Item</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown.Item>
+                  <Dropdown.Item>List Item</Dropdown.Item>
                 </Dropdown.Menu>
-              </Dropdown.Item>
-              <Dropdown.Item>List Item</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </Container>
-      </Menu>
+              </Dropdown>
+            </Container>
+          </Menu>
+
+        </Grid.Row>
+        <Grid.Row only="mobile">
+          <Menu fixed="top" compact inverted style={{ fontSize: "1.15em" }}>
+
+
+
+              <Dropdown icon="bars" item simple>
+                <Dropdown.Menu>
+                  <Dropdown.Item as="a" href="/">Home</Dropdown.Item>
+                  <Dropdown.Item as="a" href="https://github.com/mateuszkojro">Github</Dropdown.Item>
+                  <Dropdown.Item as="a" href="/about">
+                    About me
+                  </Dropdown.Item>
+                  <Dropdown.Item as="a" href="/gallery">
+                    Project Gallery
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+
+            <Menu.Item as="a" href="/" header position="right">
+              <Icon size="big" margin="2em" name="code" />
+              Mateusz Kojro
+            </Menu.Item>
+
+          </Menu>
+        </Grid.Row>
+        
+      </Grid>
     </>
   );
 }
