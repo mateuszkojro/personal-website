@@ -36,7 +36,8 @@ export default function Home() {
   return (
     <div>
       <TopBar />
-      <Segment style={{ padding: "8em 0em" }} vertical>
+      <div style={{paddingTop: "5em"}} />
+      <Segment style={{ padding: "2em" }} vertical>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             <Grid.Column width={8}>
@@ -100,7 +101,7 @@ export default function Home() {
         </Grid>
       </Segment>
 
-      <Segment style={{ padding: "8em 0em" }} vertical>
+      <Segment style={{ padding: "2em" }} vertical>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             <Grid.Column>
