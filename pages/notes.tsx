@@ -72,7 +72,7 @@ export default function Notes() {
                     </Card>
                 ))}
             </Card.Group>
-            <CustomFooter />
+            {/* <CustomFooter /> */}
         </>
     );
 }

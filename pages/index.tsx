@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div>
       <TopBar />
-      <div style={{paddingTop: "5em"}} />
+      <div style={{ paddingTop: "5em" }} />
       <Segment style={{ padding: "2em" }} vertical>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
@@ -101,7 +101,7 @@ export default function Home() {
         </Grid>
       </Segment>
 
-      <Segment style={{ padding: "2em" }} vertical>
+      <Segment style={{ padding: "3em" }} vertical>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             <Grid.Column>
@@ -123,54 +123,55 @@ export default function Home() {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-
-        <Divider
-          as="h4"
-          className="header"
-          horizontal
-          style={{ margin: "3em 0em", textTransform: "uppercase" }}
-        >
-          <a href="#">Case Studies</a>
-        </Divider>
-
-        <Header as="h3" style={{ fontSize: "2em" }}>
-          Article
-        </Header>
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{article}</ReactMarkdown>
-        <Button
-          as="a"
-          size="large"
-          onClick={() => {
-            getReadme(
-              `https://raw.githubusercontent.com/mateuszkojro/video_player/master/README.md`
-            );
-          }}
-        >
-          Read More
-        </Button>
-        {/* </Container> */}
       </Segment>
-      <Segment style={{ padding: "0em" }} vertical>
-        <Grid celled="internally" columns="equal" stackable>
-          <Grid.Row textAlign="center">
-            <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
+
+      <Segment style={{ padding: "3em" }} vertical>
+        <Grid container stackable verticalAlign="middle">
+          <Grid.Row>
+            <Grid.Column floated="left" width={8}>
+              {/* <Container text> */}
               <Header as="h3" style={{ fontSize: "2em" }}>
-                "Some text"
-              </Header>
-              <p style={{ fontSize: "1.33em" }}>subtext</p>
-            </Grid.Column>
-            <Grid.Column style={{ paddingBottom: "5em", paddingTop: "5em" }}>
-              <Header as="h3" style={{ fontSize: "2em" }}>
-                "Some text"
+                Github
               </Header>
               <p style={{ fontSize: "1.33em" }}>
-                {/* <Image avatar src='/images/avatar/large/nan.jpg' /> */}
-                subtext
+                All of my code is on Github
               </p>
+              <Button as="a" size="large" href="/notes">
+                Notes
+              </Button>
+              {/* </Container> */}
+            </Grid.Column>
+            <Grid.Column only="computer tablet" floated="left">
+              <Icon name="github" size="massive" />
             </Grid.Column>
           </Grid.Row>
         </Grid>
       </Segment>
+
+      <Segment style={{ padding: "3em" }} vertical>
+        <Grid container stackable verticalAlign="middle">
+          <Grid.Row>
+            <Grid.Column only="computer tablet">
+              <Icon name="file alternate" size="massive" />
+            </Grid.Column>
+            <Grid.Column floated="right" width={8}>
+              {/* <Container text> */}
+              <Header as="h3" style={{ fontSize: "2em" }}>
+                CV
+              </Header>
+              <p style={{ fontSize: "1.33em" }}>
+                Here you can download my CV.{" "}
+              </p>
+              <Button as="a" size="large" href="/notes">
+                Notes
+              </Button>
+              {/* </Container> */}
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Segment>
+
+
 
       {/* <CustomFooter /> */}
     </div>

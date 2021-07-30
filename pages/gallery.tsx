@@ -63,7 +63,7 @@ export default function Gallery() {
           </Card>
         ))}
       </Card.Group>
-      <CustomFooter />
+      {/* <CustomFooter /> */}
     </>
   );
 }
