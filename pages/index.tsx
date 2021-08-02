@@ -136,8 +136,8 @@ export default function Home() {
               <p style={{ fontSize: "1.33em" }}>
                 All of my code is on Github
               </p>
-              <Button as="a" size="large" href="/notes">
-                Notes
+              <Button as="a" size="large" href="https://github.com/mateuszkojro">
+                Github
               </Button>
               {/* </Container> */}
             </Grid.Column>
@@ -162,8 +162,8 @@ export default function Home() {
               <p style={{ fontSize: "1.33em" }}>
                 Here you can download my CV.{" "}
               </p>
-              <Button as="a" size="large" href="/notes">
-                Notes
+              <Button as="a" size="large" href="/Mateusz_Kojro_CV_en.pdf">
+                Downlad CV
               </Button>
               {/* </Container> */}
             </Grid.Column>
