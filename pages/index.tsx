@@ -53,6 +53,7 @@ export default function Home() {
               <Image
                 bordered
                 rounded
+                alt="Github profile statistics"
                 size="large"
                 layout="fill"
                 as="a"

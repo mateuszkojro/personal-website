@@ -40,8 +40,8 @@ export default function Gallery() {
           marginTop: "5em",
         }}
       >
-        {articles.map((article) => (
-          <Card>
+        {articles.map((article, idx) => (
+          <Card key={idx}>
             <Card.Content>
               <Card.Header>{article.name}</Card.Header>
               <Card.Meta>{article.category} </Card.Meta>
