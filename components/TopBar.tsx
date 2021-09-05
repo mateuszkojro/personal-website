@@ -19,11 +19,14 @@ export default function TopBar() {
               </Menu.Item>
               <Menu.Item as="a" href="/">Home</Menu.Item>
               <Menu.Item as="a" href="https://github.com/mateuszkojro">Github</Menu.Item>
-              <Menu.Item as="a" href="/about">
+              {/* <Menu.Item as="a" href="/about">
                 About me
-              </Menu.Item>
+              </Menu.Item> */}
               <Menu.Item as="a" href="/gallery">
                 Project Gallery
+              </Menu.Item>
+              <Menu.Item as="a" href="/notes">
+                Notes
               </Menu.Item>
             </Container>
           </Menu>
@@ -31,21 +34,18 @@ export default function TopBar() {
         </Grid.Row>
         <Grid.Row only="mobile">
           <Menu fixed="top" compact inverted style={{ fontSize: "1.15em" }}>
-
-
-
-              <Dropdown icon="bars" item simple>
-                <Dropdown.Menu>
-                  <Dropdown.Item as="a" href="/">Home</Dropdown.Item>
-                  <Dropdown.Item as="a" href="https://github.com/mateuszkojro">Github</Dropdown.Item>
-                  <Dropdown.Item as="a" href="/about">
-                    About me
-                  </Dropdown.Item>
-                  <Dropdown.Item as="a" href="/gallery">
-                    Project Gallery
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
+            <Dropdown icon="bars" item simple>
+              <Dropdown.Menu>
+                <Dropdown.Item as="a" href="/">Home</Dropdown.Item>
+                <Dropdown.Item as="a" href="https://github.com/mateuszkojro">Github</Dropdown.Item>
+                <Dropdown.Item as="a" href="/about">
+                  About me
+                </Dropdown.Item>
+                <Dropdown.Item as="a" href="/gallery">
+                  Project Gallery
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
 
             <Menu.Item as="a" href="/" header position="right">
               <Icon size="big" margin="2em" name="code" />
@@ -54,7 +54,7 @@ export default function TopBar() {
 
           </Menu>
         </Grid.Row>
-        
+
       </Grid>
     </>
   );
